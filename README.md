@@ -8,7 +8,7 @@ Plugin to show a window with systopic information
 
 ## Screenshot
 
-![correomqtt-plugin-systopic](screenshots/screenshot1.png)
+![correomqtt-plugin-systopic](https://github.com/al-salah/correomqtt-plugin-systopic/blob/main/screenshots/Screenshot1.png)
 
 
-![correomqtt-plugin-systopic](screenshots/screenshot2.png)
+![correomqtt-plugin-systopic](https://github.com/al-salah/correomqtt-plugin-systopic/blob/main/screenshots/Screenshot2.png)
