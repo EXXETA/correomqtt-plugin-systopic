@@ -1,4 +1,4 @@
-package org;
+package org.correomqtt.plugin.systopic;
 
 import javafx.fxml.FXMLLoader;
 import javafx.util.FXPermission;

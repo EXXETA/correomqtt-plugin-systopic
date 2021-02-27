@@ -1,4 +1,4 @@
-package org.model;
+package org.correomqtt.plugin.systopic.model;
 
 import org.correomqtt.business.utils.MessageDateTimeFormatter;
 import javafx.beans.Observable;

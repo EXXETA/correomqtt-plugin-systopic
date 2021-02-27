@@ -1,12 +1,14 @@
-package org.controller;
+package org.correomqtt.plugin.systopic.controller;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import org.correomqtt.business.dispatcher.ConnectionLifecycleDispatcher;
 import org.correomqtt.business.dispatcher.ConnectionLifecycleObserver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+
 import java.io.IOException;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -17,7 +19,7 @@ public class SysTopicButtonController  implements ConnectionLifecycleObserver {
 
     @FXML
     private Button SYSbutton;
-    private HBox pluginBox;
+
     private String connectionId;
 
     public SysTopicButtonController(String connectionId) {
@@ -25,10 +27,11 @@ public class SysTopicButtonController  implements ConnectionLifecycleObserver {
         ConnectionLifecycleDispatcher.getInstance().addObserver(this);
     }
 
-    public void addItems(HBox hBox) {
-        this.pluginBox = hBox;
-        pluginBox.getChildren().add(SYSbutton);
+    public void addItems(HBox toolbar, int indexToinsert) {
+        HBox.setMargin(SYSbutton, new Insets(0, 0, 0, 5));
+        toolbar.getChildren().add(indexToinsert,SYSbutton);
     }
+
     @FXML
      void OnClicked() throws IOException {
         LOGGER.info("$SYS Button clicked with connectionId:" + connectionId);

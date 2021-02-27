@@ -1,4 +1,4 @@
-package org.model;
+package org.correomqtt.plugin.systopic.model;
 
 import java.util.Arrays;
 import java.util.HashMap;

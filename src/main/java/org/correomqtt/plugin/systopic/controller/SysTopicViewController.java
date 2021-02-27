@@ -1,4 +1,4 @@
-package org.controller;
+package org.correomqtt.plugin.systopic.controller;
 
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
@@ -29,9 +29,9 @@ import org.correomqtt.gui.model.SubscriptionPropertiesDTO;
 import org.correomqtt.gui.model.WindowProperty;
 import org.correomqtt.gui.model.WindowType;
 import org.correomqtt.gui.utils.WindowHelper;
-import org.model.SysTopic;
-import org.model.SysTopicPropertiesDTO;
-import org.model.SysTopicTransformer;
+import org.correomqtt.plugin.systopic.model.SysTopic;
+import org.correomqtt.plugin.systopic.model.SysTopicPropertiesDTO;
+import org.correomqtt.plugin.systopic.model.SysTopicTransformer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -47,7 +47,7 @@ public class SysTopicViewController implements SubscribeObserver {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SysTopicViewController.class);
     private static final String SYS_TOPIC = "$SYS/#";
-    private static final ResourceBundle resources = ResourceBundle.getBundle("org.correomqtt.i18n", SettingsProvider.getInstance().getSettings().getCurrentLocale());
+    private static final ResourceBundle resources = ResourceBundle.getBundle("org.correomqtt.plugin.systopic.i18n", SettingsProvider.getInstance().getSettings().getCurrentLocale());
 
     private final SubscriptionPropertiesDTO subscriptionDTO = SubscriptionPropertiesDTO.builder()
             .topic(SYS_TOPIC)
@@ -81,7 +81,7 @@ public class SysTopicViewController implements SubscribeObserver {
             return;
         }
         SysTopicViewController sysTopicViewController = new SysTopicViewController();
-        FXMLLoader loader = new FXMLLoader(SysTopicViewController.class.getResource("/controller/sysTopicsView.fxml"), resources);
+        FXMLLoader loader = new FXMLLoader(SysTopicViewController.class.getResource("/org/correomqtt/plugin/systopic/controller/sysTopicsView.fxml"), resources);
         loader.setController(sysTopicViewController);
         Parent parent= loader.load();
 

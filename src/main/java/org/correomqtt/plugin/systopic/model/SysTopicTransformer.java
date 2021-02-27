@@ -1,9 +1,6 @@
-package org.model;
+package org.correomqtt.plugin.systopic.model;
 
 import org.correomqtt.business.model.MessageDTO;
-import org.model.SysTopic;
-import org.model.SysTopicPropertiesDTO;
-
 
 public class SysTopicTransformer {
 

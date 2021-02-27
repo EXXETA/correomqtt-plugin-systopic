@@ -1,6 +1,6 @@
-package org.controller;
+package org.correomqtt.plugin.systopic.controller;
 
-import org.model.SysTopic;
+import org.correomqtt.plugin.systopic.model.SysTopic;
 import org.correomqtt.business.provider.SettingsProvider;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,7 +8,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListCell;
 import javafx.scene.control.ListView;
 import javafx.scene.layout.Pane;
-import org.model.SysTopicPropertiesDTO;
+import org.correomqtt.plugin.systopic.model.SysTopicPropertiesDTO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -50,8 +50,8 @@ public class SysTopicCellController extends ListCell<SysTopicPropertiesDTO> {
 
             if (loader == null) {
                 try {
-                    loader = new FXMLLoader(SysTopicCellController.class.getResource("/cell/sysTopicCell.fxml"),
-                            ResourceBundle.getBundle("org.correomqtt.i18n", SettingsProvider.getInstance().getSettings().getCurrentLocale()));
+                    loader = new FXMLLoader(SysTopicCellController.class.getResource("/org/correomqtt/plugin/systopic/cell/sysTopicCell.fxml"),
+                            ResourceBundle.getBundle("org.correomqtt.plugin.systopic.i18n", SettingsProvider.getInstance().getSettings().getCurrentLocale()));
                     loader.setController(this);
                     loader.load();
 
