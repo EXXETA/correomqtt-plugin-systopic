@@ -13,8 +13,8 @@
     <maven.compiler.target>13</maven.compiler.target>
     <maven.compiler.source>13</maven.compiler.source>
 
-    <plugin.id>SysTopicPlugin</plugin.id>
-    <plugin.class>org.SysTopicPlugin</plugin.class>
+    <plugin.id>systopic-plugin</plugin.id>
+    <plugin.class>org.correomqtt.plugin.systopic.SysTopicPlugin</plugin.class>
     <plugin.version>0.0.1</plugin.version>
     <plugin.provider>EXXETA AG</plugin.provider>
     <plugin.description>Plugin to show a window with systopic information</plugin.description>
