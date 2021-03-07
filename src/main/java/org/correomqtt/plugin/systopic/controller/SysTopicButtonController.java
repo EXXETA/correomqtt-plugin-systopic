@@ -1,7 +1,6 @@
 package org.correomqtt.plugin.systopic.controller;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
 import org.correomqtt.business.dispatcher.ConnectionLifecycleDispatcher;
@@ -28,7 +27,6 @@ public class SysTopicButtonController  implements ConnectionLifecycleObserver {
     }
 
     public void addItems(HBox toolbar, int indexToinsert) {
-        HBox.setMargin(SYSbutton, new Insets(0, 0, 0, 5));
         toolbar.getChildren().add(indexToinsert,SYSbutton);
     }
 
